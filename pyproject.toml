@@ -1,0 +1,53 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "questher"
+version = "1.0.0"
+description = "Technical Question Answering Tool with AI Integration"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "MIT"}
+authors = [
+    {name = "Questher Team"}
+]
+keywords = ["ai", "question-answering", "llm", "openai", "ollama", "openrouter"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+
+[project.scripts]
+questher = "questher.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/questher/questher"
+Repository = "https://github.com/questher/questher.git"
+Documentation = "https://github.com/questher/questher/blob/main/README.md"
+
+# Test configuration for pytest
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+addopts = [
+    "-v",
+    "--tb=short",
+    "--strict-markers",
+    "--disable-warnings"
+]
+markers = [
+    "integration: marks tests as integration tests (requires external services)",
+    "slow: marks tests as slow (deselect with '-m \"not slow\"')"
+]
