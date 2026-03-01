@@ -162,3 +162,4 @@ config/local_*.py
 # Instructor documentation (exclude from public repo)
 README_INSTRUCTOR.md
 test-commands.md
+PUSH_SUMMARY.md
