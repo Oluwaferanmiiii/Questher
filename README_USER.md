@@ -6,7 +6,7 @@
 
 **Questher** is a powerful technical question answering tool that leverages multiple AI providers to deliver accurate, detailed explanations for programming and technical concepts.
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Installation
 
@@ -45,27 +45,27 @@ python -m questher "What is a generator?"
 questher.bat "Explain decorators"
 ```
 
-## ✨ Features
+## Features
 
-### 🌊 Streaming Responses
+### Streaming Responses
 Get real-time answers as they're being generated:
 ```bash
 python -m questher --stream "Explain async programming"
 ```
 
-### ⚡ Performance Metrics
+### Performance Metrics
 Track response time and speed:
 ```bash
 python -m questher --metrics "What are list comprehensions?"
 ```
 
-### 🔍 Provider Comparison
+### Provider Comparison
 Compare answers from different AI models:
 ```bash
 python -m questher --compare "List vs Tuple"
 ```
 
-### 🎯 Provider Selection
+### Provider Selection
 Choose your preferred AI provider:
 ```bash
 python -m questher --provider openrouter "What is OOP?"
@@ -73,13 +73,13 @@ python -m questher --provider openai "Explain recursion"
 python -m questher --provider ollama "What is a decorator?"
 ```
 
-### 🐛 Debug Mode
+### Debug Mode
 Get detailed logging for troubleshooting:
 ```bash
 python -m questher --verbose "Debug this code"
 ```
 
-## 📋 Command Reference
+## Command Reference
 
 | Option | Description | Example |
 |--------|-------------|---------|
@@ -92,7 +92,7 @@ python -m questher --verbose "Debug this code"
 | `--version` | Show version information | `--version` |
 | `--help` | Display help message | `--help` |
 
-## 🔧 Configuration
+## Configuration
 
 ### Environment Variables
 Create a `.env` file with your API keys:
@@ -117,29 +117,29 @@ Questher automatically detects and prioritizes providers:
 2. **OpenRouter** (cost-effective) - if API key configured  
 3. **OpenAI** (premium) - if API key configured
 
-## 🎯 Use Cases
+## Use Cases
 
-### 🎓 Learning & Education
+### Learning & Education
 - Get detailed explanations of programming concepts
 - Compare different AI teaching styles
 - Learn with real-time streaming responses
 
-### 🔧 Development Support
+### Development Support
 - Debug code issues with AI assistance
 - Get best practices and optimization tips
 - Understand complex algorithms and patterns
 
-### 📚 Documentation & Research
+### Documentation & Research
 - Generate technical documentation
 - Research programming topics
 - Create educational content
 
-### 🧪 Testing & Quality Assurance
+### Testing & Quality Assurance
 - Compare AI model responses
 - Test different providers for quality
 - Benchmark performance metrics
 
-## 🏗️ Architecture
+## Architecture
 
 Questher is built with a clean, modular architecture:
 
@@ -159,7 +159,7 @@ Questher/
 └── docs/              # Documentation
 ```
 
-## 🛠️ Advanced Usage
+## Advanced Usage
 
 ### Combining Features
 ```bash
@@ -194,7 +194,7 @@ for provider, response in responses.items():
     print(f"{provider}: {response}")
 ```
 
-## 🐛 Troubleshooting
+## Troubleshooting
 
 ### Common Issues
 
@@ -235,7 +235,7 @@ python -m questher --version
 python -m questher --verbose "test question"
 ```
 
-## 📊 Performance Tips
+## Performance Tips
 
 - **Use Ollama** for free, local processing
 - **Use OpenRouter** for cost-effective multi-model access
@@ -243,7 +243,7 @@ python -m questher --verbose "test question"
 - **Use streaming** for better user experience with long answers
 - **Compare providers** to find best responses for your needs
 
-## 🤝 Contributing
+## Contributing
 
 Questher is open to contributions! Please:
 
@@ -253,11 +253,11 @@ Questher is open to contributions! Please:
 4. Add tests if applicable
 5. Submit a pull request
 
-## 📄 License
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🔗 Links
+## Links
 
 - [Repository](https://github.com/questher/questher)
 - [Documentation](https://github.com/questher/questher/blob/main/docs/)
@@ -266,6 +266,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-**Questher** - Your intelligent technical question answering companion! 🚀
+**Questher** - Your intelligent technical question answering companion!
 
-*Built with ❤️ for developers, students, and technical professionals.*
+*Built with care for developers, students, and technical professionals.*

@@ -1,0 +1,2 @@
+[console_scripts]
+questher = questher.cli:main

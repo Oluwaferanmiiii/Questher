@@ -1,10 +1,10 @@
 # Questher - Technical Question Answering CLI
 
-## 🎯 Overview
+## Overview
 
 Questher is a custom CLI tool for your week1-solution project that allows you to ask technical questions and get detailed AI-powered answers.
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Method 1: Direct Python (Recommended)
 ```bash
@@ -21,7 +21,7 @@ questher.bat "Your question here"
 cmd /c "questher.bat \"Your question here\""
 ```
 
-## 📋 Command Options
+## Command Options
 
 ### Basic Usage
 ```bash
@@ -62,9 +62,9 @@ cmd /c "questher.bat \"Your question here\""
 .venv\Scripts\python.exe questher.py --version
 ```
 
-## 🎨 Features
+## Features
 
-### ✅ Core Features
+### Core Features
 - **Auto-detection**: Automatically finds the best available provider
 - **Multiple Providers**: OpenAI, OpenRouter, Ollama support
 - **Streaming**: Real-time response streaming
@@ -72,7 +72,7 @@ cmd /c "questher.bat \"Your question here\""
 - **Comparison**: Side-by-side provider comparison
 - **Clean Output**: Emoji-free, professional interface
 
-### 📊 Performance Metrics
+### Performance Metrics
 When using `--metrics`, you'll see:
 - Response time
 - Answer length (characters)
@@ -80,7 +80,7 @@ When using `--metrics`, you'll see:
 - Processing speed (words/sec)
 - Throughput (chars/sec)
 
-## 🔧 Provider Options
+## Provider Options
 
 | Provider | Command | Notes |
 |----------|---------|-------|
@@ -89,7 +89,7 @@ When using `--metrics`, you'll see:
 | OpenAI | `--provider openai` | Requires API key |
 | Ollama | `--provider ollama` | Free local models |
 
-## 💡 Usage Examples
+## Usage Examples
 
 ### Web Development Questions
 ```bash
@@ -111,7 +111,7 @@ When using `--metrics`, you'll see:
 .venv\Scripts\python.exe questher.py --metrics "Optimize this code"
 ```
 
-## 🛠️ Troubleshooting
+## Troubleshooting
 
 ### Common Issues
 
@@ -145,7 +145,7 @@ Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 .venv\Scripts\python.exe questher.py "Your question"
 ```
 
-## 🎯 Pro Tips
+## Pro Tips
 
 1. **Use quotes for questions with spaces**
 2. **Add `--metrics` for performance analysis**
@@ -153,7 +153,7 @@ Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 4. **Try `--compare` to see different provider responses**
 5. **Use `--verbose` for debugging connection issues**
 
-## 📝 Example Session
+## Example Session
 
 ```bash
 # Start with a simple question
@@ -169,4 +169,4 @@ Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 .venv\Scripts\python.exe questher.py --stream "How does async work in Python?"
 ```
 
-Questher is now ready to help with all your technical questions! 🚀
+Questher is now ready to help with all your technical questions!
