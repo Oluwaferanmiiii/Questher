@@ -6,6 +6,7 @@ Provides convenient factory functions for different use cases
 import os
 from typing import Optional
 from .core import TechnicalQA, ModelProvider, ModelConfig
+from .code_generator import CodeGenerator
 
 def create_qa_tool(provider: str = "auto", model_name: Optional[str] = None) -> TechnicalQA:
     """
@@ -96,3 +97,57 @@ def create_ollama_qa(model_name: str = "llama3.2") -> TechnicalQA:
 def create_openrouter_qa(model_name: str = "anthropic/claude-3.5-haiku") -> TechnicalQA:
     """Create a TechnicalQA instance configured for OpenRouter."""
     return create_qa_tool(provider="openrouter", model_name=model_name)
+
+def create_code_generator(provider: str, model_name: str) -> CodeGenerator:
+    """
+    Factory function to create a CodeGenerator instance.
+    
+    Args:
+        provider: AI provider ("openai", "anthropic", "google", "grok", "openrouter")
+        model_name: Specific model name to use
+        
+    Returns:
+        Configured CodeGenerator instance
+    """
+    if provider == "openai":
+        api_key = os.getenv('OPENAI_API_KEY')
+        if not api_key or not api_key.startswith("sk-proj-") or "your-key-here" in api_key:
+            raise ValueError("Valid OpenAI API key not found")
+        
+        from openai import OpenAI
+        client = OpenAI(api_key=api_key)
+        
+    elif provider == "anthropic":
+        api_key = os.getenv('ANTHROPIC_API_KEY')
+        if not api_key or not api_key.startswith("sk-ant-") or "your-key-here" in api_key:
+            raise ValueError("Valid Anthropic API key not found")
+        
+        from openai import OpenAI
+        client = OpenAI(api_key=api_key, base_url="https://api.anthropic.com/v1")
+        
+    elif provider == "google":
+        api_key = os.getenv('GOOGLE_API_KEY')
+        if not api_key or not api_key.startswith("AIza") or "your-key-here" in api_key:
+            raise ValueError("Valid Google API key not found")
+        
+        from openai import OpenAI
+        client = OpenAI(api_key=api_key, base_url="https://generativelanguage.googleapis.com/v1beta/openai/")
+        
+    elif provider == "grok":
+        api_key = os.getenv('GROK_API_KEY')
+        if not api_key or "your-key-here" in api_key:
+            raise ValueError("Valid Grok API key not found")
+        
+        from openai import OpenAI
+        client = OpenAI(api_key=api_key, base_url="https://api.x.ai/v1")
+        
+    else:  # Default to openrouter
+        provider = "openrouter"
+        api_key = os.getenv('OPENROUTER_API_KEY')
+        if not api_key or "your-key-here" in api_key:
+            raise ValueError("Valid OpenRouter API key not found")
+        
+        from openai import OpenAI
+        client = OpenAI(api_key=api_key, base_url="https://openrouter.ai/api/v1")
+    
+    return CodeGenerator(client=client, model_name=model_name)

@@ -1,25 +1,37 @@
-# Core dependencies
-openai>=1.0.0
-python-dotenv>=1.0.0
-requests>=2.25.0
+# Questher v3 - Single Source of Truth Requirements
+# Core AI and API dependencies
+openai>=1.0.0,<2.0.0
+python-dotenv>=1.0.0,<2.0.0
+requests>=2.25.0,<3.0.0
+
+# UI dependencies
+gradio>=3.0.0,<5.0.0
+
+# Data processing
+numpy>=1.20.0,<2.0.0
+pandas>=1.5.0,<3.0.0
 
 # Web API dependencies
-fastapi>=0.104.0
-uvicorn[standard]>=0.24.0
+fastapi>=0.104.0,<1.0.0
+uvicorn[standard]>=0.24.0,<1.0.0
+
+# Audio processing (for voice features)
+librosa>=0.10.0,<1.0.0
+soundfile>=0.12.0,<1.0.0
 
 # Development dependencies
-pytest>=7.0.0
-pytest-cov>=4.0.0
-pytest-asyncio>=0.21.0
-black>=23.0.0
-flake8>=6.0.0
-mypy>=1.0.0
+pytest>=7.0.0,<8.0.0
+pytest-cov>=4.0.0,<5.0.0
+pytest-asyncio>=0.21.0,<1.0.0
+black>=23.0.0,<24.0.0
+flake8>=6.0.0,<7.0.0
+mypy>=1.0.0,<2.0.0
 
-# Jupyter dependencies
-jupyter>=1.0.0
-ipykernel>=6.0.0
-matplotlib>=3.7.0
+# Jupyter dependencies (for development)
+jupyter>=1.0.0,<2.0.0
+ipykernel>=6.0.0,<7.0.0
+matplotlib>=3.7.0,<4.0.0
 
-# Optional: For enhanced features
-redis>=5.0.0  # For caching (future)
-prometheus-client>=0.17.0  # For metrics (future)
+# Optional: Enhanced features
+redis>=5.0.0,<6.0.0  # For caching (future)
+prometheus-client>=0.17.0,<1.0.0  # For metrics (future)
